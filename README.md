@@ -4,7 +4,7 @@ Desired state for the Hasicorp Stack AWS
 ### Getting started
 ```
 job "nomoperator" {
-  datacenters = ["DC1"]
+  datacenters = ["dc1"]
   group "nomoperator" {
     count = 1
     task "nomoperator" {
