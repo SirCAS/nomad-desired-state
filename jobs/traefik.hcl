@@ -16,6 +16,7 @@ job "traefik" {
   }
 
   group "traefik" {
+    count = 3
 
     network {
       mode = "bridge"
