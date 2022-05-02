@@ -1,7 +1,7 @@
 job "hello_world" {
   
   datacenters = [
-  "DC1"
+  "dc1"
 ]
   type = "service"
 
