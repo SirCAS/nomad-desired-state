@@ -19,7 +19,7 @@ job "hello_world" {
       name = "webapp"
       tags = [
   "traefik.enable=true",
-  "traefik.http.routers.webapp.rule=Host(`duck-lb-tf-48272336.eu-central-1.elb.amazonaws.com`)"
+  "traefik.http.routers.webapp.rule=Host(`joey-lb-tf-498199835.eu-central-1.elb.amazonaws.com`)"
 ]
       port = "http"
 
