@@ -15,7 +15,7 @@ job "hello_world" {
 
     network {
       port "http" {
-        to = 8000
+        to = 9898
       }
     }
 
@@ -49,13 +49,13 @@ job "hello_world" {
       driver = "docker"
 
       config {
-        image = "mnomitch/hello_world_server"
+        image = "stefanprodan/podinfo"
         ports = ["http"]
       }
 
-      env {
-        MESSAGE = "Hello from Nomad and Hackerdays!"
-      }
+      // env {
+      //   MESSAGE = "Hello from Nomad and Hackerdays!"
+      // }
     }
   }
 }
