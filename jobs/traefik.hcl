@@ -49,6 +49,8 @@ job "traefik" {
       }
       template {
         data = <<EOF
+[log]
+  level = "DEBUG"
 [serversTransport]
   insecureSkipVerify = true
 [entryPoints]
@@ -69,6 +71,9 @@ job "traefik" {
 [providers.consulCatalog.endpoint]
   address = "{{ env "attr.unique.network.ip-address" }}:8500"
   scheme  = "http"
+  endpointWaitTime = "2s"
+
+
 
 EOF
 
