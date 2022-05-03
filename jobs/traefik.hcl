@@ -62,10 +62,12 @@ job "traefik" {
   dashboard = true
   insecure = true
 [providers.consulCatalog]
+  requireConsistent = true
+  refreshInterval = "5s"
   prefix           = "traefik"
   exposedByDefault = false
 [providers.consulCatalog.endpoint]
-  address = "52.59.117.112:8500"
+  address = "{{ env "attr.unique.network.ip-address" }}:8500"
   scheme  = "http"
 
 EOF
