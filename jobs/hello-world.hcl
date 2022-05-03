@@ -28,22 +28,22 @@ job "hello_world" {
 ]
       port = "http"
 
-      check {
-        name     = "alive"
-        type     = "http"
-        path     = "/"
-        interval = "10s"
-        timeout  = "2s"
-      }
-    }
+    //   check {
+    //     name     = "alive"
+    //     type     = "http"
+    //     path     = "/"
+    //     interval = "10s"
+    //     timeout  = "2s"
+    //   }
+    // }
 
 
-    restart {
-      attempts = 2
-      interval = "30m"
-      delay = "15s"
-      mode = "fail"
-    }
+    // restart {
+    //   attempts = 2
+    //   interval = "30m"
+    //   delay = "15s"
+    //   mode = "fail"
+    // }
 
     task "server" {
       driver = "docker"
@@ -54,7 +54,7 @@ job "hello_world" {
       }
 
       env {
-        MESSAGE = "Hello from Nomad!"
+        MESSAGE = "Hello from Nomad and Hackerdays!"
       }
     }
   }
