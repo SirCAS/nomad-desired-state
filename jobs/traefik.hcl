@@ -8,7 +8,7 @@ job "traefik" {
   
   constraint {
     attribute = "${meta.type}"
-    value     = "server"
+    value     = "client"
   }
   constraint {
     attribute = "${attr.kernel.name}"
@@ -16,7 +16,6 @@ job "traefik" {
   }
 
   group "traefik" {
-    count = 3
 
     network {
       mode = "bridge"
