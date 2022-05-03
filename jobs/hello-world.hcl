@@ -5,6 +5,11 @@ job "hello_world" {
 ]
   type = "service"
 
+  constraint {
+    attribute = "${meta.type}"
+    value     = "client"
+  }
+
   group "app" {
     count = 3
 
